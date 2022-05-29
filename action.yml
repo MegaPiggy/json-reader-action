@@ -1,0 +1,25 @@
+name: 'Json Property Reader'
+description: 'Read the property of a json'
+author: 'Noah Pilarski'
+branding:
+  icon: 'file-text'
+  color: 'blue'
+inputs:
+  path:
+    description: 'The path of the json to be read.'
+    required: true
+  property:
+    description: 'The property to be read.'
+    required: true
+  encoding:
+    description: 'The encoding of the file.'
+    default: 'utf8'
+    required: false
+outputs:
+  contents:
+    description: 'The json contents.'
+  value:
+    description: 'The value of the property.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
